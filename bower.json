@@ -1,6 +1,6 @@
 {
-  "name": "angular-scaffold-1.3",
-  "version": "0.2.0",
+  "name": "angular-scaffold",
+  "version": "0.2.1",
   "authors": [
     "Christian West <christian@lightningkite.com>",
     "Russell Maxfield <russ.max783@gmail.com>"
@@ -17,9 +17,9 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.3.4",
+    "angular": "~1.4.0",
     "angular-ui-router": "~0.2.13",
     "angular-mocks": "~1.3.9",
-    "lodash": "~2.4.1"
+    "lodash": "~3.9.3"
   }
 }

@@ -36,7 +36,7 @@
      * @desc stores token into local storage if provided, otherwise removes
      * @param {null} - will remove token if exists
      * @param {String} token - JWT token to store
-     * @returns {String} - JWT Token
+     * @returns {}
      */
     function setToken(token) {
       if (token) {
