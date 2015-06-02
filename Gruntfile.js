@@ -8,6 +8,7 @@ module.exports = function ( grunt ) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-karma');
+  grunt.loadNpmTasks('grunt-protractor-runner');
   grunt.loadNpmTasks('grunt-html2js');
 
   var userConfig = require( './build.config.js' );
@@ -142,6 +143,14 @@ module.exports = function ( grunt ) {
       continuous: {
         singleRun: true
       }
+    },
+
+    protractor: {
+      options: {
+        keepAlive: true,
+        configFile: "protractor.conf.js"
+      },
+      run: {}
     },
 
     /**
@@ -371,6 +380,10 @@ module.exports = function ( grunt ) {
     'clean', 'html2js', 'jshint', 'sass:build', 'concat:build_css', 'copy:build_app_assets',
     'copy:build_vendor_assets', 'copy:build_appjs', 'copy:build_vendorjs',
     'index:build', 'karmaconfig', 'karma:continuous'
+  ]);
+
+  grunt.registerTask( 'test', [
+    'protractor'
   ]);
 
   grunt.registerTask( 'quick-build', [

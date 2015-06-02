@@ -32,7 +32,7 @@ Then place your sym links from your django project to the build folder and you s
 
 `http-server` can help if you dont want to set a backend up for development. To run with http-server:
 
-1. run `npm install http-server - g`
+1. run `npm install -g http-server`
 2. make sure you have run the quick start commands
 3. after instalation, in the project root run `http-server ./build`
 4. navigate to localhost:8080
@@ -142,6 +142,16 @@ would be just as acceptable.
 #### Sass:
 
 Obviously we use sass for our development. Your sass files will go in here. You may want to put individual sass files next to to components like directives or templates which is fine. This directory is for the sass files that style the whole site. 
+
+
+#### Tests:
+
+Karma unit tests will be run from any file named ```*.spec.js```. Protractor end-to-end tests will be run from any file named ```*.e2e.js```. Karma unit tests are run on build but to run the protractor tests they need to be run manually with the command ```grunt test```. There is some server set up required if you are developing in a server environment. Protractor, Selenium, xvfb (and supporting packages), and phantomjs should all be installed globally on the server before the ```grunt test``` command will work correctly. Also Selenium should be running as a service on the server.
+[https://www.exratione.com/2013/12/angularjs-headless-end-to-end-testing-with-protractor-and-selenium/](https://www.exratione.com/2013/12/angularjs-headless-end-to-end-testing-with-protractor-and-selenium/)
+
+If you are working locally end-to-end tests are easier to get working and you basically just have to install protractor globally and run the command ```webdriver-start``` to get a selenium server up and running to get your tests to work. See the protractor docs: [http://angular.github.io/protractor/#/tutorial](http://angular.github.io/protractor/#/tutorial)
+
+Tests are all written with the Jasmine testing framework. Protractor is an extension of Jasmine and provides a few extra features for navigating the browser and selecting elements on the page. To get up to speed on writing unit tests and end-to-end tests see the [Jasmine](http://jasmine.github.io/) docs and the [Protractor](http://angular.github.io/protractor/) docs.
 
 
 
