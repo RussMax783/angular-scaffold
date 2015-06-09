@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html ng-app="lkScaffold" ng-controller="AppCtrl">
   <head>
+    <meta charset="UTF-8">
     <title ng-bind="pageTitle"></title>
+    <title>Angular Scaffold</title>
 
     <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
     <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
@@ -11,9 +13,16 @@
 
   </head>
   <body>
-    <div class="container">
-      <side-bar></side-bar>
-      <div class="lk-view" ui-view="main"></div>
+
+    <div class="lk-wrap">
+      <header>
+        <a ui-sref="home">Home</a>
+        <a ui-sref="login">Login</a>
+      </header>
+      <div class="lk-content" ui-view="main"></div>
+      <div class="lk-push"></div>
     </div>
+
+    <footer>Cool the footer is at the bottom</footer>
   </body>
 </html>

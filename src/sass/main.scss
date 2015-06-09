@@ -1,58 +1,60 @@
- /***************
- GENERAL
- ***************/
- * {
+@import "_variables";
+@import "_helpers";
+
+/*------------------------------------*\
+              ¡GENERAL
+\*------------------------------------*/
+
+* {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
     box-sizing: border-box;
- }
-
- h1,h2,h3,h4,h5,h6{
     margin: 0;
     padding: 0;
- }
+}
 
- .lk-clear {
-    clear: both;
-    display: block;
-    float: none;
- }
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+}
 
- /***************
- LAYOUT
- ***************/
-
- html, body{
-    width: 100%;
+html {
     height: 100%;
-    padding: 0;
-    border: 0;
-    margin: 0;
- }
+}
 
- body {
-    background: -webkit-radial-gradient(10% 20%,#717a8b 0%,#3e4553 60%);
-    background: -moz-radial-gradient(at 10% 20%,#717a8b 0%,#3e4553 60%);
-    background: radial-gradient(at 10% 20%,#717a8b 0%,#3e4553 60%);
- }
-
- body, body * {
-    font-weight: 300;
-    color: #fff;
- }
-
- .container {
+body{
     height: 100%;
- }
+    font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: color(main-1);
+}
 
- header,
- .lk-lk-push{
-    height: 81px;
- }
-
- .lk-wrapper{
-    height: 100%;
+.lk-wrap{
     min-height: 100%;
-    margin-top: -81px;
- }
+    height: auto !important;
+    height: 100%;
+    margin-bottom: unquote('-' + config(footer));
+    position: relative;
+}
+
+
+
+
+/*------------------------------------*\
+                ¡HEADER
+\*------------------------------------*/
+
+header {
+    height: config(header);
+}
+
+
+
+/*------------------------------------*\
+                ¡FOOTER
+\*------------------------------------*/
+
+.lk-push,
+footer {
+    height: config(footer);
+}
